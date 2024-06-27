@@ -3,13 +3,12 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
 import secrets
+from config import config
 
 app = Flask(__name__)
 
 # Configure the database
-app.config["SQLALCHEMY_DATABASE_URI"] = (
-    "postgresql://postgres:postgres123@localhost:5432/postgres"
-)
+app.config["SQLALCHEMY_DATABASE_URI"] = config["POSTGRES_URL"]
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Configure session
@@ -25,7 +24,9 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password_hash = db.Column(db.String(162), nullable=False) #although password hash is 162 length
+    password_hash = db.Column(
+        db.String(162), nullable=False
+    )  # although password hash is 162 length
 
 
 # Create the database tables
@@ -79,4 +80,4 @@ def status():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=config["IS_DEBUG"])
