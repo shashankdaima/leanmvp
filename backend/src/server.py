@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
 import secrets
 from config import config
+from flask_cors import CORS
 
 app = Flask(__name__)
 
@@ -12,12 +13,15 @@ app.config["SQLALCHEMY_DATABASE_URI"] = config["POSTGRES_URL"]
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Configure session
+# TODO: Need to add redis based sessions
 app.secret_key = secrets.token_hex(16)
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-db = SQLAlchemy(app)
+CORS(app)
+# CORS(app, supports_credentials=True) # - include credentials (like cookies) in CORS requests
 
+db = SQLAlchemy(app)
 
 # Define a User model
 class User(db.Model):
