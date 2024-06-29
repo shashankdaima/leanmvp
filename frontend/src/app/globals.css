@@ -63,6 +63,8 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+
+    --primary-tint: #E3F5FF;
   }
 }
 
@@ -76,6 +78,6 @@
   }
 }
 
-.menu{
-  padding:16px;
+.menu {
+  padding: 16px;
 }

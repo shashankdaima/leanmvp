@@ -9,11 +9,12 @@ interface AppbarProps {
 
     setIsLeftCollapsed: (val: boolean) => void;
     setIsRightCollapsed: (val: boolean) => void;
+    className?: string;
 }
 
-export const AppBar = ({ setIsLeftCollapsed, isLeftCollapsed, setIsRightCollapsed, isRightCollapsed }: AppbarProps) => {
+export const AppBar = ({ setIsLeftCollapsed, isLeftCollapsed, setIsRightCollapsed, isRightCollapsed, className }: AppbarProps) => {
     return (
-        <div className="border-b-2 p-3 flex flex-row  items-center space-x-2">
+        <div className={` border-b-2 p-4 flex flex-row flex-grow items-center space-x-2 ${className}`}>
             {/* this is topbar */}
             <Toggle onPressedChange={setIsLeftCollapsed} pressed={(isLeftCollapsed)} size={"icon"} aria-label="Toggle Let">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
