@@ -152,15 +152,14 @@ export const Main = () => {
                 </ResponsiveContainer>
                 <TabLayout className='px-6' />
             </div>
-            <div className='flex flex-row  gap-5'>
-
-                <div className="gap-2  flex-grow pb-10 pt-6 pr-6  bg-[#F7F9FB]  rounded-2xl text-sm  items-start" style={{ height: '300px' }}>
+            <div className='flex flex-row gap-5'>
+                <div className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
                     <p className="text-sm px-7 font-semibold mb-5">Traffic by Device</p>
-                    <TrafficByDevice/>
+                    <TrafficByDevice />
                 </div>
-                <div className="gap-2  flex-grow p-5 bg-[#F7F9FB]  rounded-2xl text-sm items-start" style={{ height: '300px' }}>
-                    <p className="text-sm font-semibold">Traffic by Location</p>
-                    <TrafficByLocation  />
+                <div className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
+                    <p className="text-sm px-7 font-semibold mb-5">Traffic by Location</p>
+                    <TrafficByLocation />
                 </div>
             </div>
         </div>
