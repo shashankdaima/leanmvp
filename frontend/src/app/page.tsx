@@ -7,13 +7,14 @@ import { RightPanel } from "@/components/sidepanels/right";
 import { Toggle } from "@/components/ui/toggle";
 import { useState } from "react";
 import { Main } from "./_page";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export default function Home() {
   const [isLeftCollapsed, setIsLeftCollapsed] = useState(false);
   const [isRightCollapsed, setIsRightCollapsed] = useState(false);
 
   return (
-    <>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <div className={`fixed w-full transition-all  duration-300 z-10 ${isRightCollapsed ? '' : 'pr-64'}  ${isLeftCollapsed ? '' : 'pl-56'} `}>
         <AppBar className="bg-white" isLeftCollapsed={isLeftCollapsed} isRightCollapsed={isRightCollapsed} setIsLeftCollapsed={setIsLeftCollapsed} setIsRightCollapsed={setIsRightCollapsed} />
       </div>
@@ -31,6 +32,6 @@ export default function Home() {
           {!isRightCollapsed && <RightPanel />}
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 }

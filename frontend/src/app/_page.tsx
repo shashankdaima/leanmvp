@@ -2,6 +2,8 @@ import TabLayout from '@/components/tabLayout';
 import { TrafficByDevice } from '@/components/trafficByDevice';
 import TrafficByLocation from '@/components/trafficByLocation';
 import { DividerHorizontalIcon, DividerVerticalIcon } from '@radix-ui/react-icons';
+import Link from 'next/link';
+import { motion } from "framer-motion"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 const generateData = () => {
     const months = [
@@ -59,7 +61,7 @@ export const Main = () => {
             <p className="px-2 font-semibold">Today </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                <div className="flex-grow p-5 bg-[#E3F5FF] flex flex-col rounded-2xl gap-2">
+                <Link href="" className="flex-grow p-5 bg-[#E3F5FF] flex flex-col rounded-2xl gap-2">
                     <p className="text-sm font-semibold">Views</p>
                     <div className="flex flex-row items-center gap-1" >
                         <p className="text-3xl flex-grow font-semibold">721K</p>
@@ -70,8 +72,8 @@ export const Main = () => {
 
                     </div>
 
-                </div>
-                <div className="flex-grow p-5 bg-[#E5ECF6] flex flex-col rounded-2xl gap-2">
+                </Link>
+                <Link href="" className="flex-grow p-5 bg-[#E5ECF6] flex flex-col rounded-2xl gap-2">
                     <p className="text-sm font-semibold">Views</p>
                     <div className="flex flex-row items-center gap-1" >
 
@@ -83,8 +85,8 @@ export const Main = () => {
 
                     </div>
 
-                </div>
-                <div className="flex-grow p-5 bg-[#E3F5FF] flex flex-col rounded-2xl gap-2">
+                </Link>
+                <Link href="" className="flex-grow p-5 bg-[#E3F5FF] flex flex-col rounded-2xl gap-2">
                     <p className="text-sm font-semibold">Views</p>
                     <div className="flex flex-row items-center gap-1" >
 
@@ -96,8 +98,8 @@ export const Main = () => {
 
                     </div>
 
-                </div>
-                <div className="flex-grow p-5 bg-[#E5ECF6] flex flex-col rounded-2xl gap-2">
+                </Link>
+                <Link href="" className="flex-grow p-5 bg-[#E5ECF6] flex flex-col rounded-2xl gap-2">
                     <p className="text-sm font-semibold">Views</p>
                     <div className="flex flex-row items-center gap-1" >
                         <p className="text-3xl flex-grow font-semibold">721K</p>
@@ -108,11 +110,15 @@ export const Main = () => {
 
                     </div>
 
-                </div>
+                </Link>
 
 
             </div>
-            <div className="gap-2 px-1 py-5 bg-[#F7F9FB] flex flex-col rounded-2xl gap-5 text-sm items-start" style={{ height: '360px' }}>
+            <motion.div
+                initial={{ opacity: 0, y: 10, scale: 0.5 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: .75 }}
+                className="gap-2 px-1 py-5 bg-[#F7F9FB] flex flex-col rounded-2xl gap-5 text-sm items-start" style={{ height: '360px' }}>
                 <div className='px-6 pt-1 flex flex-row gap-4  text-[#CBCDCE] items-center justify-center'>
                     <a href='#' className='font-semibold text-[#1C1C1C]'>Total Users</a>
                     <a href='#' className=' hover:text-gray-400'>Total Projects</a>
@@ -151,16 +157,22 @@ export const Main = () => {
                     </LineChart>
                 </ResponsiveContainer>
                 <TabLayout className='px-6' />
-            </div>
+            </motion.div>
             <div className='flex flex-row gap-5'>
-                <div className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
+                <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.5 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: .75 }} className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
                     <p className="text-sm px-7 font-semibold mb-5">Traffic by Device</p>
                     <TrafficByDevice />
-                </div>
-                <div className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.5 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: .75 }} className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
                     <p className="text-sm px-7 font-semibold mb-5">Traffic by Location</p>
                     <TrafficByLocation />
-                </div>
+                </motion.div>
             </div>
         </div>
     );
