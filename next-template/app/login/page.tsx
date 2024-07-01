@@ -19,25 +19,21 @@ export default function Component() {
             <div className="flex flex-grow items-center justify-center ">
 
                 <div className="flex flex-col items-center justify-center  w-1/2">
-                    <h2 className="mb-8 text-3xl font-bold text-center text-[#183B56]">Let’s join us</h2>
+                    <h2 className="mb-8 text-3xl font-bold text-center text-[#183B56]">Welcome back.</h2>
                     <Button className="w-full px-1.5 py-6 mb-4 bg-[#1565D8] flex flex-row hover:bg-blue-500 text-white">
                         <div className="w-9 h-9 bg-white p-1.5 rounded">
-                            <img src="./google.png"/>
+                            <img src="./google.png" />
                         </div>
-                        <span className="flex-grow font-semibold">Sign up with Google</span>
+                        <span className="flex-grow font-semibold">Sign in with Google</span>
                     </Button>
                     <div className="flex items-center justify-center w-full mb-4">
                         <span className="flex-grow h-px bg-[#E5EAF4]" />
-                        <span className="px-4 text-sm text-[#183B56] font-medium">Or, sign up with your email</span>
+                        <span className="px-4 text-sm text-[#183B56] font-medium">Or, sign in with your email</span>
                         <span className="flex-grow h-px bg-[#E5EAF4]" />
                     </div>
                     <div className="w-full mb-4 space-y-1.5">
-                        <Label htmlFor="name" className="text-[#5A7184]">Your Name*</Label>
-                        <Input id="name" type="text" placeholder="Name"  className="w-full text-[#183B56] font-medium" />
-                    </div>
-                    <div className="w-full mb-4 space-y-1.5">
                         <Label htmlFor="email" className="text-[#5A7184]">Email address*</Label>
-                        <Input id="email" type="email" placeholder="Enter your Email"  className="w-full text-[#183B56] font-medium" />
+                        <Input id="email" type="email" placeholder="Enter your Email" className="w-full text-[#183B56] font-medium" />
                     </div>
                     <div className="w-full mb-4 space-y-1.5">
                         <Label htmlFor="password" className="text-[#5A7184]">Password*</Label>
@@ -45,17 +41,17 @@ export default function Component() {
                     </div>
                     <div className="flex items-center justify-between w-full mb-6">
                         <div className="flex items-center">
-                            <Checkbox id="agree-on-tc" className="" />
-                            <Label htmlFor="agree-on-tc" className="ml-2 text-sm">
-                            Agree to terms & conditions
+                            <Checkbox id="keep-me-signin" className="" />
+                            <Label htmlFor="keep-me-signin" className="ml-2 text-sm">
+                                Keep Me Sign in
                             </Label>
                         </div>
                     </div>
-                    <Button className="w-full py-6 bg-[#1565D8] hover:bg-blue-500 font-semibold text-white">Sign up</Button>
+                    <Button className="w-full py-6 bg-[#1565D8] hover:bg-blue-500 font-semibold text-white">Sign in</Button>
                     <div className="mt-6 text-center w-full">
-                        <span className="text-sm text-gray-500">Already have an account? </span>
+                        <span className="text-sm text-gray-500">Don't have an account? </span>
                         <Link href="#" className="text-sm text-blue-600" prefetch={false}>
-                            Login now
+                            Signup now
                         </Link>
                     </div>
                 </div>
