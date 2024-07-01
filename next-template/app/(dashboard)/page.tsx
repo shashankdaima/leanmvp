@@ -10,7 +10,9 @@ import CountUp from 'react-countup';
 const Dashboard = () => {
     return (
         <div className="p-6 flex  flex-col flex-grow max-w-6xl gap-6">
-            <p className="px-2 font-semibold">Today </p>
+            <motion.div initial={{ opacity: 0, y: -10,x:0,  }}
+                animate={{ opacity: 1, y: 0, x:0,}}
+                transition={{ duration: .75 }} className="px-2 font-semibold">Today </motion.div>
             <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.5 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
