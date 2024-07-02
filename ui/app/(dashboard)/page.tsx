@@ -49,12 +49,12 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
+        // TODO: Should be done with parellel routing and loading interace. 
         getCounterData();
         getYearlyData();
         getTrafficDistribution();
     }, []);
     useEffect(() => {
-        // console.log(authState);
         if (authState == "not-authenticated") {
             //move to main dashboard
             toast({
