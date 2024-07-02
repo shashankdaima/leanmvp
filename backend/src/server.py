@@ -117,6 +117,6 @@ def traffic_distribution():
         return jsonify({"error": "Unauthorized"}), 401
     return jsonify(utils.generate_traffic_data())
 
-
+print(config)
 if __name__ == "__main__":
-    app.run(debug=config["IS_DEBUG"])
+    app.run(debug=config["IS_DEBUG"], host='0.0.0.0')
