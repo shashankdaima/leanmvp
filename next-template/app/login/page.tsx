@@ -129,7 +129,7 @@ export default function Component() {
                     <Button className="w-full py-6 bg-[#1565D8] hover:bg-blue-500 font-semibold text-white" disabled={!isChecked} onClick={onSubmit}>Sign in</Button>
                     <div className="mt-6 text-center w-full">
                         <span className="text-sm text-gray-500">Don't have an account? </span>
-                        <Link href="#" className="text-sm text-blue-600" prefetch={false}>
+                        <Link href="/signup" className="text-sm text-blue-600" prefetch={false}>
                             Signup now
                         </Link>
                     </div>
