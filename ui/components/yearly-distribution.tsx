@@ -30,7 +30,7 @@ export const YearlyDistribution = (props:YearlyDistributionProps) => {
         initial={{ opacity: 0, y: 10, scale: 0.5 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: .75 }}
-        className="gap-2 px-1 py-5 bg-[#F7F9FB] flex flex-col rounded-2xl gap-5 text-sm items-start" style={{ height: '360px' }}>
+        className="px-1 py-5 bg-[#F7F9FB] flex flex-col rounded-2xl gap-5 text-sm items-start" style={{ height: '360px' }}>
         <div className='px-6 pt-1 flex flex-row gap-4  text-[#CBCDCE] items-center justify-center'>
             <a href='#' className='font-semibold text-[#1C1C1C]'>Total Users</a>
             <a href='#' className=' hover:text-gray-400'>Total Projects</a>
