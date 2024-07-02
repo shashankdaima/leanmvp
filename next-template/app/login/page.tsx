@@ -38,7 +38,7 @@ export default function Component() {
     }, []);
 
     useEffect(() => {
-        console.log(authState);
+        // console.log(authState);
         if (authState == "authenticated") {
             //move to main dashboard
             toast({

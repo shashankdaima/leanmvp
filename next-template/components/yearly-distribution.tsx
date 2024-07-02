@@ -1,34 +1,8 @@
 import { motion } from "framer-motion"
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import TabLayout from "./tabLayout";
-const generateData = () => {
-    const months = [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-    ];
+import { YearlyDistributionProps } from "@/app/(dashboard)/props";
 
-    const data = months.map(month => {
-        // Generate base sales and previous year sales
-        let baseSale = getRandomInt(10000, 20000);
-        let basePrevYearSale = baseSale - getRandomInt(1000, 3000); // Previous year sale slightly lower
-
-        // Simulate fluctuations with a random factor
-        let saleFluctuation = getRandomInt(-2000, 2000); // Random fluctuation up to +/- 2000
-        let prevYearFluctuation = getRandomInt(-1500, 1500); // Random fluctuation up to +/- 1500
-
-        // Apply fluctuations to base sales
-        let sale = baseSale + saleFluctuation;
-        let prevYearSale = basePrevYearSale + prevYearFluctuation;
-
-        return {
-            month: month,
-            sale: Math.max(0, sale),               // Ensure sale is non-negative
-            prevYearSale: Math.max(0, prevYearSale) // Ensure prevYearSale is non-negative
-        };
-    });
-
-    return data;
-};
 const DataFormater = (number: number) => {
     if (number > 1000000000) {
         return (number / 1000000000).toString() + 'B';
@@ -48,9 +22,10 @@ const getRandomInt = (min: number, max: number) => {
 };
 
 // Example usage:
-const data = generateData();
+// const data = generateData();
+const data: any[] | undefined=[];
 
-export const YearlyDistribution = () => {
+export const YearlyDistribution = (props:YearlyDistributionProps) => {
     return (<motion.div
         initial={{ opacity: 0, y: 10, scale: 0.5 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -78,7 +53,7 @@ export const YearlyDistribution = () => {
             <LineChart
                 width={500}
                 height={300}
-                data={data}
+                data={props.data}
                 margin={{
                     top: 5,
                     right: 30,
