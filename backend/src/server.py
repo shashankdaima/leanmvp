@@ -5,7 +5,7 @@ from flask_session import Session
 import secrets
 from config import config
 from flask_cors import CORS
-
+import redis
 app = Flask(__name__)
 
 # Configure the database
@@ -15,13 +15,20 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 # Configure session
 # TODO: Need to add redis based sessions
 app.secret_key = secrets.token_hex(16)
-app.config["SESSION_TYPE"] = "filesystem"
+app.config["SESSION_TYPE"] = "redis"  # or use 'redis' for production
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_USE_SIGNER"] = True
+app.config["SESSION_COOKIE_HTTPONLY"] = True
+app.config["SESSION_COOKIE_SECURE"] = False  # Set to True in production with HTTPS
+app.config["SESSION_REDIS"] = redis.from_url("redis://127.0.0.1:6379")  # Set to True in production with HTTPS
+
 Session(app)
 
-CORS(app)
+CORS(app, supports_credentials=True)
 # CORS(app, supports_credentials=True) # - include credentials (like cookies) in CORS requests
 
 db = SQLAlchemy(app)
+
 
 # Define a User model
 class User(db.Model):
@@ -52,6 +59,7 @@ def signup():
         new_user = User(name=name, email=email, password_hash=password_hash)
         db.session.add(new_user)
         db.session.commit()
+        session["email"] = email
         return jsonify({"message": "Signup successful!"}), 201
 
 
@@ -77,10 +85,15 @@ def logout():
 
 @app.route("/status", methods=["GET"])
 def status():
-    if "email" in session:
-        return jsonify({"logged_in_as": session["email"]}), 200
-    else:
-        return jsonify({"message": "Not logged in!"}), 401
+    email = session.get("email")
+    if not email:
+        return jsonify({"error": "Unauthorized"}), 401
+    
+    user = User.query.filter_by(email=email).first()
+    return jsonify({
+        "id": user.id,
+        "email": user.email
+    }) 
 
 
 if __name__ == "__main__":

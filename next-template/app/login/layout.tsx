@@ -1,3 +1,5 @@
+"use client"
+import { Toaster } from "@/components/ui/toaster"
 import "@/styles/globals.css"
 
 interface RootLayoutProps {
@@ -6,7 +8,10 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <div className="h-screen flex flex-col    items-center justify-center">{children}</div>
+    <>
+      <div className="h-screen flex flex-col    items-center justify-center">{children}</div>
+      <Toaster />
+    </>
 
   )
 }
