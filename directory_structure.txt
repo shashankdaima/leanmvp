@@ -1,0 +1,108 @@
+.
+├── README.md
+├── backend
+│   ├── Dockerfile
+│   ├── docker
+│   │   ├── compose.dev-dependencies-only.yml
+│   │   └── compose.prod.yml
+│   ├── flask_session
+│   │   ├── 2029240f6d1128be89ddc32729463129
+│   │   └── a68a9977ef7f3bd57cbd0471fe783fc4
+│   ├── requirements.txt
+│   └── src
+│       ├── __pycache__
+│       │   ├── config.cpython-311.pyc
+│       │   ├── server.cpython-311.pyc
+│       │   └── utils.cpython-311.pyc
+│       ├── config.py
+│       ├── requirements.txt
+│       ├── server.py
+│       └── utils.py
+├── directory_structure.txt
+├── screenshots
+│   ├── auth-dark.png
+│   ├── dashboard-dark.png
+│   ├── dashboard-light.png
+│   └── image.png
+└── ui
+    ├── README.md
+    ├── app
+    │   ├── (dashboard)
+    │   │   ├── @counter
+    │   │   │   └── page.tsx
+    │   │   ├── @distribution
+    │   │   │   └── page.tsx
+    │   │   ├── @traffic
+    │   │   │   └── page.tsx
+    │   │   ├── collapsible-layout.tsx
+    │   │   ├── default.tsx
+    │   │   ├── layout.tsx
+    │   │   └── props.ts
+    │   ├── layout.tsx
+    │   ├── login
+    │   │   ├── layout.tsx
+    │   │   └── page.tsx
+    │   └── signup
+    │       ├── layout.tsx
+    │       └── page.tsx
+    ├── components
+    │   ├── appbar.tsx
+    │   ├── icons.tsx
+    │   ├── main-nav.tsx
+    │   ├── search.tsx
+    │   ├── sidepanels
+    │   │   ├── left.tsx
+    │   │   └── right.tsx
+    │   ├── site-header.tsx
+    │   ├── tabLayout.tsx
+    │   ├── tailwind-indicator.tsx
+    │   ├── theme-provider.tsx
+    │   ├── theme-toggle.tsx
+    │   ├── trafficByDevice.tsx
+    │   ├── trafficByLocation.tsx
+    │   └── ui
+    │       ├── breadcrumb.tsx
+    │       ├── button.tsx
+    │       ├── checkbox.tsx
+    │       ├── collapsibleNavGroup.tsx
+    │       ├── input.tsx
+    │       ├── label.tsx
+    │       ├── sheet.tsx
+    │       ├── skeleton.tsx
+    │       ├── toast.tsx
+    │       ├── toaster.tsx
+    │       ├── toggle.tsx
+    │       └── use-toast.ts
+    ├── components.json
+    ├── config
+    │   └── site.ts
+    ├── lib
+    │   ├── dashboardErrorHook.ts
+    │   ├── fonts.ts
+    │   ├── getDashboardData.ts
+    │   ├── rightSidePanelsRawData.ts
+    │   └── utils.ts
+    ├── next-env.d.ts
+    ├── next.config.mjs
+    ├── package-lock.json
+    ├── package.json
+    ├── postcss.config.js
+    ├── prettier.config.js
+    ├── public
+    │   ├── favicon.ico
+    │   ├── google.png
+    │   ├── next.svg
+    │   ├── placeholder.svg
+    │   ├── profile.png
+    │   ├── signup.png
+    │   ├── thirteen.svg
+    │   └── vercel.svg
+    ├── styles
+    │   └── globals.css
+    ├── tailwind.config.js
+    ├── tsconfig.json
+    ├── tsconfig.tsbuildinfo
+    └── types
+        └── nav.ts
+
+22 directories, 83 files
