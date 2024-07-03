@@ -4,10 +4,17 @@ import { useState, useEffect } from "react";
 import { AppBar } from "@/components/appbar";
 import { LeftPanel } from "@/components/sidepanels/left";
 import { RightPanel } from "@/components/sidepanels/right";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet"
 
 export default function CollapsibleLayout({ children }: { children: React.ReactNode }) {
-  const [isLeftCollapsed, setIsLeftCollapsed] = useState(false);
-  const [isRightCollapsed, setIsRightCollapsed] = useState(false);
+  const [isLeftCollapsed, setIsLeftCollapsed] = useState(true);
+  const [isRightCollapsed, setIsRightCollapsed] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -27,9 +34,7 @@ export default function CollapsibleLayout({ children }: { children: React.ReactN
         <div className={`fixed w-full transition-all duration-300 z-10 ${isRightCollapsed ? '' : 'pr-64'} ${isLeftCollapsed ? '' : 'pl-56'}`}>
           <AppBar className="bg-[hsl(var(--background))]" isLeftCollapsed={isLeftCollapsed} isRightCollapsed={isRightCollapsed} setIsLeftCollapsed={setIsLeftCollapsed} setIsRightCollapsed={setIsRightCollapsed} />
         </div>
-      ) :
-        <AppBar className="bg-[hsl(var(--background))]" isLeftCollapsed={isLeftCollapsed} isRightCollapsed={isRightCollapsed} setIsLeftCollapsed={setIsLeftCollapsed} setIsRightCollapsed={setIsRightCollapsed} />
-
+      ) : <AppBar className="bg-[hsl(var(--background))]" isLeftCollapsed={isLeftCollapsed} isRightCollapsed={isRightCollapsed} setIsLeftCollapsed={setIsLeftCollapsed} setIsRightCollapsed={setIsRightCollapsed} />
       }
       <div className="flex h-screen">
         {!isMobile && (
@@ -52,6 +57,21 @@ export default function CollapsibleLayout({ children }: { children: React.ReactN
           </div>
         )}
       </div>
+
+      {/* Left Panel Sheet for mobile */}
+      <Sheet open={!isLeftCollapsed && isMobile} onOpenChange={(open) => setIsLeftCollapsed(!open)}>
+        <SheetContent className="p-0" side="left">
+
+          <LeftPanel />
+        </SheetContent>
+      </Sheet>
+
+      {/* Right Panel Sheet for mobile */}
+      <Sheet open={!isRightCollapsed && isMobile} onOpenChange={(open) => setIsRightCollapsed(!open)}>
+        <SheetContent className="p-0" side="right">
+          <RightPanel />
+        </SheetContent>
+      </Sheet>
     </>
   );
 }
