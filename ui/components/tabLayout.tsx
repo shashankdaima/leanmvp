@@ -26,7 +26,7 @@ const TabLayout: React.FC<TabLayoutProps> = ({ className = '' }) => {
   };
 
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative hidden md:block ${className}`}>
       <div className="flex">
         {tabs.map((tab, index) => (
           <button

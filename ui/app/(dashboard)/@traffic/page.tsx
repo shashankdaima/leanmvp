@@ -35,7 +35,7 @@ export default function traffic() {
             <Skeleton className="flex-grow p-5 flex flex-col rounded-2xl h-full gap-2" />
         </div>
         :
-        <div className='flex flex-row gap-5'>
+        <div className='flex flex-col lg:flex-row gap-5'>
         <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.5 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}

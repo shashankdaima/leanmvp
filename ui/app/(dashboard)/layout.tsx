@@ -38,6 +38,7 @@ export default function DashboardLayout({
   ]);
   return (
     <>
+
       <CollapsibleLayout >
         <div className="p-6 flex  flex-col flex-grow max-w-6xl gap-6">
 

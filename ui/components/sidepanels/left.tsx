@@ -39,7 +39,7 @@ export const LeftPanel = () => {
             <ul className="px-2  space-y-3 text-sm ">
                 <li className="text-gray-600 flex flex-row gap-2 hover:text-gray-800 cursor-pointer transition-colors">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#1C1C1C" fill-opacity="0.2" />
+                        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#1C1C1C" fillOpacity="0.2" />
                     </svg>
 
                     Overview
@@ -47,7 +47,7 @@ export const LeftPanel = () => {
 
                 <li className="text-gray-600 flex flex-row gap-2 hover:text-gray-800 cursor-pointer transition-colors">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#1C1C1C" fill-opacity="0.2" />
+                        <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#1C1C1C" fillOpacity="0.2" />
                     </svg>
 
                     Projects
