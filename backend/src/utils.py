@@ -82,7 +82,7 @@ def generate_static_info():
 def generate_traffic_data():
     devices = ["linux", "windows", "mac", "android", "ios", "other"]
     locations = [
-        {"country": "United States", "color": "#1C1C1C"},
+        {"country": "United States", "color": "hsl(var(--foreground))"},
         {"country": "Canada", "color": "#BAEDBD"},
         {"country": "Mexico", "color": "#95A4FC"},
         {"country": "Other", "color": "#B1E3FF"},

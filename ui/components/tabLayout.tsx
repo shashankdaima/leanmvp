@@ -34,7 +34,7 @@ const TabLayout: React.FC<TabLayoutProps> = ({ className = '' }) => {
             ref={(el) => {
               tabsRef.current[index] = el;
             }}
-            className={`mx-2 pb-1 text-sm  transition-colors duration-200 ${activeTab === tab ? 'text-[#1C1C1C] font-semibold' : 'text-[#949597] hover:text-gray-700 font-regular'
+            className={`mx-2 pb-1 text-sm  transition-colors duration-200 ${activeTab === tab ? 'text-[hsl(var(--foreground))] font-semibold' : 'text-[#949597] hover:text-gray-700 font-regular'
               }`}
             onClick={() => setActiveTab(tab)}
           >
@@ -44,7 +44,7 @@ const TabLayout: React.FC<TabLayoutProps> = ({ className = '' }) => {
       </div>
       <div
         ref={sliderRef}
-        className={`absolute bottom-0 left-0 h-0.5 bg-[#1C1C1C] transition-all duration-300 ease-in-out ${className}`}
+        className={`absolute bottom-0 left-0 h-0.5 bg-[hsl(var(--foreground))] transition-all duration-300 ease-in-out ${className}`}
       />
     </div>
   );

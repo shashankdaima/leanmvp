@@ -39,14 +39,14 @@ export default function traffic() {
         <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.5 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: .75 }} className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
+            transition={{ duration: .75 }} className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[hsl(var(--secondary))] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
             <p className="text-sm px-7 font-semibold mb-5">Traffic by Device</p>
             {<TrafficByDevice data={data.trafficByDevice} />}
         </motion.div>
         <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.5 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: .75 }} className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[#F7F9FB] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
+            transition={{ duration: .75 }} className="gap-2 flex-grow pb-10 pt-6 pr-6 bg-[hsl(var(--secondary))] rounded-2xl text-sm items-start" style={{ height: '300px', flexBasis: '50%' }}>
             <p className="text-sm px-7 font-semibold mb-5">Traffic by Location</p>
             { <TrafficByLocation data={data?.trafficByLocation} />}
 

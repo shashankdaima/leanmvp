@@ -34,6 +34,9 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+    --accent1:#E3F5FF;
+    --accent2:#E5ECF6;
+    
   }
 
   .dark {
@@ -67,6 +70,9 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
+    
+    --accent1:#0a3d56;
+    --accent2:#31353c;
   }
 }
 

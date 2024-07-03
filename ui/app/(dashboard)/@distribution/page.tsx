@@ -52,19 +52,19 @@ export default function Distribution() {
                     initial={{ opacity: 0, y: 10, scale: 0.5 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: .75 }}
-                    className="px-1 py-5 bg-[#F7F9FB] flex flex-col rounded-2xl gap-5 text-sm items-start" style={{ height: '360px' }}>
+                    className="px-1 py-5 bg-[hsl(var(--secondary))] flex flex-col rounded-2xl gap-5 text-sm items-start" style={{ height: '360px' }}>
                     <div className='px-6 pt-1 flex flex-row gap-4  text-[#CBCDCE] items-center justify-center'>
-                        <a href='#' className='font-semibold text-[#1C1C1C]'>Total Users</a>
+                        <a href='#' className='font-semibold text-[hsl(var(--foreground))]'>Total Users</a>
                         <a href='#' className='hidden md:block  hover:text-gray-400'>Total Projects</a>
                         <a href='#' className='hidden md:block hover:text-gray-400'>Operating Status</a>
                         {/* <DividerVerticalIcon height="100%" color='#CBCDCE' /> */}
-                        <div className="flex items-center gap-2 text-[#1C1C1C] text-sm">
-                            <svg width="10" height="10" viewBox="0 0 10 10" fill="#1C1C1C" xmlns="http://www.w3.org/2000/svg">
+                        <div className="flex items-center gap-2 text-[hsl(var(--foreground))] text-sm">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="hsl(var(--foreground))" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="5" cy="5" r="5" />
                             </svg>
                             This Year
                         </div>
-                        <div className="flex items-center gap-2 text-[#1C1C1C] text-sm">
+                        <div className="flex items-center gap-2 text-[hsl(var(--foreground))] text-sm">
                             <svg width="10" height="10" viewBox="0 0 10 10" fill="#A8C5DA" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="5" cy="5" r="5" />
                             </svg>
@@ -87,7 +87,7 @@ export default function Distribution() {
 
                             <Tooltip />
                             <Line type="monotone" dataKey="prevYearSale" stroke="#A8C5DA" strokeWidth={3} />
-                            <Line type="monotone" dataKey="sale" stroke="#1C1C1C" strokeWidth={3} />
+                            <Line type="monotone" dataKey="sale" stroke="hsl(var(--foreground))" strokeWidth={3} />
                         </LineChart>
                     </ResponsiveContainer>
                     <TabLayout className='px-6' />

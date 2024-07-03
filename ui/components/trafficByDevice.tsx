@@ -23,7 +23,7 @@ const DataFormater = (number: number) => {
 
 //main 
 // if
-const colors = ["#95A4FC", "#BAEDBD", "#1C1C1C", "#B1E3FF", "#A8C5DA", "#A1E3CB"];
+const colors = ["#95A4FC", "#BAEDBD", "hsl(var(--foreground))", "#B1E3FF", "#A8C5DA", "#A1E3CB"];
 
 
 export const TrafficByDevice = (props: { data: TrafficByDeviceProp[] }) => {
