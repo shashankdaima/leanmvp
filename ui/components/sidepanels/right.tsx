@@ -14,7 +14,7 @@ export const RightPanel = () => {
             </div> */}
             {notifications.map((item, index) => {
                 return (
-                    <div className="flex items-center space-x-3 my-2">
+                    <div key={index} className="flex items-center space-x-3 my-2">
                         {/* <Skeleton className="h-10 w-10 rounded-full" /> */}
                         <div className="h-7 w-7 flex justify-center items-center rounded-lg bg-[#E3F5FF]">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@ export const RightPanel = () => {
             <h4 className="mt-4 text-base">Activities</h4>
             {activities.map((item, index) => {
                 return (
-                    <div className="flex items-center space-x-3 my-2">
+                    <div key={index} className="flex items-center space-x-3 my-2">
                         {/* <Skeleton className="h-10 w-10 rounded-full" /> */}
                         <div className="h-7 w-7 flex justify-center items-center object-cover rounded-full" style={{ backgroundImage: "url(/profile.png)" }} />
                         <div>
@@ -47,7 +47,7 @@ export const RightPanel = () => {
             <h4 className="mt-4 text-base">Contacts</h4>
             {contacts.map((item, index) => {
                 return (
-                    <div className="flex items-center space-x-3 my-2">
+                    <div key={index} className="flex items-center space-x-3 my-2">
                         {/* <Skeleton className="h-10 w-10 rounded-full" /> */}
                         <div className="h-7 w-7 flex justify-center items-center object-cover rounded-full" style={{ backgroundImage: "url(/profile.png)" }} />
                         <div>

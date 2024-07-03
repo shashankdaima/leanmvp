@@ -20,13 +20,13 @@ export interface CounterProps {
     }
 }
 export interface YearlyDistributionProps {
-    data: [
-        {
-            "month": string,
-            "prevYearSale": number,
-            "sale": number
-        }
-    ]
+    data:
+    {
+        "month": string,
+        "prevYearSale": number,
+        "sale": number
+    }[]
+
 }
 export interface TrafficByDeviceProp {
     device: string;

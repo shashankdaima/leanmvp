@@ -1,7 +1,5 @@
 // app/CollapsibleLayout.tsx
-
 'use client'
-
 import { useState } from "react";
 import { AppBar } from "@/components/appbar";
 import { LeftPanel } from "@/components/sidepanels/left";

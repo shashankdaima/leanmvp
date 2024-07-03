@@ -6,22 +6,24 @@ export const GetCounterValues = async () => {
         method: 'GET',
         credentials: 'include',
     });
-    const responseBody = await response.json();
-    return { data: responseBody } as CounterProps;
+    const responseBody: CounterProps = await response.json();
+    return {
+        data: responseBody, code: response.status
+    };
 }
 export const GetYearlyDistribution = async () => {
     const response = await fetch(`${backendUrl}/yearly-data`, {
         method: 'GET',
         credentials: 'include',
     });
-    const responseBody = await response.json();
-    return { data: responseBody } as YearlyDistributionProps;
+    const responseBody = await response.json() as YearlyDistributionProps;
+    return { data: responseBody, code: response.status };
 }
 export const GetTrafficDistributionData = async () => {
     const response = await fetch(`${backendUrl}/traffic-distribution`, {
         method: 'GET',
         credentials: 'include',
     });
-    const responseBody = await response.json();
-    return responseBody as TrafficDataProps;
+    const responseBody = await response.json() as TrafficDataProps;
+    return { responseBody: responseBody, code: response.status };
 }
