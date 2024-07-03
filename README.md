@@ -2,6 +2,7 @@
 
 A modern web application utilizing Next.js for the frontend and Flask (Python) for the backend. This app includes user authentication, a dashboard for logged-in users, and a responsive interface.
 
+> **Note:** I have used upstash's redis for auth sessions which is not working atm, that's auth veriication is removed from the codebase, this will be fixed by evening. Thanks
 ## Features
 
 - User Authentication
