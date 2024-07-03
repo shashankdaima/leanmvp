@@ -96,25 +96,25 @@ def status():
 
 @app.route("/yearly-data", methods=["GET"])
 def get_yearly_data():
-    email = session.get("email")
-    if not email:
-        return jsonify({"error": "Unauthorized"}), 401
+    # email = session.get("email")
+    # if not email:
+    #     return jsonify({"error": "Unauthorized"}), 401
     return jsonify(utils.generate_data())
 
 
 @app.route("/static-info", methods=["GET"])
 def static_info():
-    email = session.get("email")
-    if not email:
-        return jsonify({"error": "Unauthorized"}), 401
+    # email = session.get("email")
+    # if not email:
+    #     return jsonify({"error": "Unauthorized"}), 401
     return jsonify(utils.generate_static_info())
 
 
 @app.route("/traffic-distribution", methods=["GET"])
 def traffic_distribution():
-    email = session.get("email")
-    if not email:
-        return jsonify({"error": "Unauthorized"}), 401
+    # email = session.get("email")
+    # if not email:
+    #     return jsonify({"error": "Unauthorized"}), 401
     return jsonify(utils.generate_traffic_data())
 
 print(config)
