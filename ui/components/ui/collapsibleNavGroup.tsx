@@ -22,7 +22,7 @@ const CollapsibleNavGroup: React.FC<CollapsibleNavGroupProps> = ({ navItem }) =>
         <div className="mb-2">
             <button
                 onClick={toggleExpand}
-                className="flex flex-row items-center space-x-1 w-full px-2 py-2 text-left text-gray-700 hover:bg-gray-200 !rounded"
+                className="flex flex-row items-center space-x-1 w-full px-2 py-2 text-left text-gray-700 hover:bg-gray-200 !rounded-lg"
             >
                 {isExpanded ? (
                     <ChevronDownIcon className="w-4 h-4" />
@@ -43,7 +43,7 @@ const CollapsibleNavGroup: React.FC<CollapsibleNavGroupProps> = ({ navItem }) =>
                         <li key={index}>
                             <a
                                 href="#"
-                                className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 !rounded"
+                                className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 hover:text-gray-900 !rounded-lg"
                             >
                                 {item}
                             </a>
