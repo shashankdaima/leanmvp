@@ -85,7 +85,7 @@ export default function Distribution() {
                             <XAxis dataKey="month" stroke='#9FA1A2' />
                             <YAxis tickFormatter={DataFormater} axisLine={false} stroke='#9FA1A2' />
 
-                            <Tooltip />
+                            <Tooltip contentStyle={{ backgroundColor: 'hsl(var(--card))' }}  />
                             <Line type="monotone" dataKey="prevYearSale" stroke="#A8C5DA" strokeWidth={3} />
                             <Line type="monotone" dataKey="sale" stroke="hsl(var(--foreground))" strokeWidth={3} />
                         </LineChart>
