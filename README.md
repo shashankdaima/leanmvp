@@ -26,6 +26,7 @@ It has support or both light and dark mode..
 Ensure you have the following installed:
 
 - [Node.js](https://nodejs.org/en/download/)
+- [Docker](https://www.docker.com/)
 - [Python](https://www.python.org/downloads/)
 - A code editor like [Visual Studio Code](https://code.visualstudio.com/) or [PyCharm](https://www.jetbrains.com/pycharm/)
 
@@ -34,8 +35,8 @@ Ensure you have the following installed:
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/yourusername/nextjs-flask-app.git
-    cd nextjs-flask-app
+    git clone https://github.com/shashankdaima/leanmvp.git
+    cd leanmvp
     ```
 
 2. Set up the backend:
